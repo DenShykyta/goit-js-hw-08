@@ -39,9 +39,7 @@ function onImageClick(e) {
     return;
   };
 
-  basicLightbox.create(`
-		<img width="1400" height="900" src="${e.target.dataset.source}">
-	`).show();
+
 
 };
 

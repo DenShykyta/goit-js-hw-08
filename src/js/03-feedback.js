@@ -9,7 +9,7 @@ const refs = {
 
 
 const STORAGE_DATA = 'feedback-data';
-const dataSave = {};
+let dataSave = {};
 
 populateInput();
 
@@ -17,10 +17,13 @@ refs.form.addEventListener('input', throttle(onFormInput, 500));
 refs.form.addEventListener('submit', onFormSubmit);
 
 function onFormInput(evt) {
+    dataSave = JSON.parse(localStorage.getItem(STORAGE_DATA)) || {}; // не розумію!!!
     
     dataSave[evt.target.name] = evt.target.value;
 
     localStorage.setItem(STORAGE_DATA, JSON.stringify(dataSave));
+
+    
 }
 
 function onFormSubmit(evt) {
