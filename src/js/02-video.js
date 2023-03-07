@@ -5,9 +5,9 @@ import throttle from 'lodash.throttle'
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
 
-player.on('timeupdate', throttle(playingTimeChack, 1000));
+player.on('timeupdate', throttle(playingTimeCheck, 1000));
 
-function playingTimeChack (evt) {
+function playingTimeCheck (evt) {
    localStorage.setItem("videoplayer-current-time", evt.seconds);
 }
 
