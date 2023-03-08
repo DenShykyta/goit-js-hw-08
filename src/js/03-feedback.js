@@ -29,6 +29,8 @@ function onFormInput(evt) {
 function onFormSubmit(evt) {
     evt.preventDefault();
 
+    console.log(dataSave);
+
     evt.currentTarget.reset();
 
     localStorage.removeItem(STORAGE_DATA);
