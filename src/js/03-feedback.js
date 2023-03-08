@@ -17,7 +17,7 @@ refs.form.addEventListener('input', throttle(onFormInput, 500));
 refs.form.addEventListener('submit', onFormSubmit);
 
 function onFormInput(evt) {
-    dataSave = JSON.parse(localStorage.getItem(STORAGE_DATA)) || {}; // не розумію!!!
+    dataSave = JSON.parse(localStorage.getItem(STORAGE_DATA)) || {}; 
     
     dataSave[evt.target.name] = evt.target.value;
 
